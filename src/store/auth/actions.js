@@ -17,10 +17,10 @@ export const apiLoginFailed = response => ({
   response,
 });
 
-// LOGOUT - For now, pass the api token in headers like {token: XXX}
-export const apiLogoutRequest = (headers) => ({
+// LOGOUT - pass the api token to the action request 
+export const apiLogoutRequest = (token) => ({
   type: types.API_LOGOUT_REQUEST,
-  headers
+  token
 });
 export const apiLogoutSuccess = response => ({
   type: types.API_LOGOUT_SUCCESS,

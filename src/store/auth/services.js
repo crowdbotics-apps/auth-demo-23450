@@ -19,7 +19,7 @@ function apiSignupRequest(action) {
 function apiLogoutRequest(action) {
   return authAPI.post(`/rest-auth/logout/`, null, {
     data: action.data,
-    headers: action.headers,
+    headers: {Authorization: `Token ${action.token}`},
   });
 }
 
